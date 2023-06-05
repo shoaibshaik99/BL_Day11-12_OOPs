@@ -6,7 +6,7 @@
         {
             Console.WriteLine("Select a program to run");
             Console.WriteLine("1.Count total number of duplicate elements in an array"
-                + "\n2.Print all unique elements of array");
+                + "\n2.Print all unique elements of array\n3.Frequency of each element");
             int option = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter the size of array");
             int len = Convert.ToInt32(Console.ReadLine()); //length of array
@@ -26,6 +26,9 @@
                     break;
                 case 2:
                     ArrayPrograms.PrintUniqueElements(arr);
+                    break;
+                case 3:
+                    ArrayPrograms.EachElementFreq(arr);
                     break;
                 default:
                     Console.WriteLine("Invalid Input");

@@ -1,7 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.Diagnostics.Metrics;
-
-namespace BL_Day11_12AssignmentOOPs
+﻿namespace BL_Day11_12AssignmentOOPs
 {
     internal class ArrayPrograms
     {
@@ -54,6 +51,28 @@ namespace BL_Day11_12AssignmentOOPs
                 {
                     Console.WriteLine(arr[i]);
                 }
+            }
+        }
+
+        internal static void EachElementFreq(int[] arr)
+        {
+            Dictionary<int, int> elementsFrequency = new();
+            foreach (int i in arr)
+            {
+                if (elementsFrequency.ContainsKey(i))
+                {
+                    elementsFrequency[i]++;
+                }
+                else
+                {
+                    elementsFrequency[i] = 1;
+                    //duplicateElements.Add(i, 1);
+                }
+            }
+
+            foreach (int key in elementsFrequency.Keys)
+            {
+                Console.WriteLine("Number of times " + key + " occurs: " + elementsFrequency[key]);
             }
         }
     }
