@@ -75,5 +75,21 @@
                 Console.WriteLine("Number of times " + key + " occurs: " + elementsFrequency[key]);
             }
         }
+
+        internal static void MaxMin(int[] arr)
+        {
+            int max = arr[1];
+            int min = arr[0];
+            foreach (int num in arr)
+            {
+                if (max < num)
+                    max = num;
+
+                if (min > num)
+                    min = num;
+            }
+            Console.WriteLine("Max: " + max);
+            Console.WriteLine("Min: " + min);
+        }
     }
 }
