@@ -7,7 +7,7 @@ namespace BL_Day11_12AssignmentOOPs
         public static int CountOfDulplicateElements(int[] arr)
         {
             Dictionary<int, int> elementsFrequency = new();
-            foreach (int i in arr.Skip(1))
+            foreach (int i in arr)
             {
                 if (elementsFrequency.ContainsKey(i))
                 {
