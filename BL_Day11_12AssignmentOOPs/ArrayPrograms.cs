@@ -2,7 +2,19 @@
 {
     internal class ArrayPrograms
     {
-        public static int CountOfDulplicateElements(int[] arr)
+        public static int[] arr;
+        static ArrayPrograms()
+        {
+            Console.WriteLine("Enter the size of array");
+            int len = Convert.ToInt32(Console.ReadLine()); //length of array
+            arr = new int[len];
+            for (int i = 0; i < len; i++)
+            {
+                Console.Write("Enter element number {0} of array:", i + 1);
+                arr[i] = Convert.ToInt32(Console.ReadLine());
+            }
+        }
+        public static int CountOfDulplicateElements()
         {
             Dictionary<int, int> elementsFrequency = new();
             foreach (int i in arr)
@@ -25,14 +37,14 @@
                     coountOfDuplicates++;
                 }
             }
-            if (coountOfDuplicates <= 0)
+            if (coountOfDuplicates < 0)
             {
                 return -1;
             }
             return coountOfDuplicates;
         }
 
-        public static void PrintUniqueElements(int[] arr)
+        public static void PrintUniqueElements()
         {
             int len  = arr.Length;
             Console.WriteLine("The unique elements in the array are: ");
@@ -54,7 +66,7 @@
             }
         }
 
-        internal static void EachElementFreq(int[] arr)
+        internal static void EachElementFreq()
         {
             Dictionary<int, int> elementsFrequency = new();
             foreach (int i in arr)
@@ -76,7 +88,7 @@
             }
         }
 
-        internal static void MaxMin(int[] arr)
+        internal static void MaxMin()
         {
             int max = arr[1];
             int min = arr[0];
