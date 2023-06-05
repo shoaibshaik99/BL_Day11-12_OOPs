@@ -1,4 +1,5 @@
-﻿using System.Diagnostics.Metrics;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Diagnostics.Metrics;
 
 namespace BL_Day11_12AssignmentOOPs
 {
@@ -32,6 +33,28 @@ namespace BL_Day11_12AssignmentOOPs
                 return -1;
             }
             return coountOfDuplicates;
+        }
+
+        public static void PrintUniqueElements(int[] arr)
+        {
+            int len  = arr.Length;
+            Console.WriteLine("The unique elements in the array are: ");
+            for (int i = 0; i < len; i++)
+            {
+                bool isUnique = true;
+                for (int j = 0; j < i; j++)
+                {
+                    if (arr[i] == arr[j])
+                    {
+                        isUnique = false;
+                        break;
+                    }
+                }
+                if (isUnique)
+                {
+                    Console.WriteLine(arr[i]);
+                }
+            }
         }
     }
 }
