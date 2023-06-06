@@ -7,7 +7,8 @@
             Console.WriteLine("Select a program to run it");
             Console.WriteLine("1.Count total number of duplicate elements in an array"
                 + "\n2.Print all unique elements of array\n3.Frequency of each element" +
-                "\n4.Find Max and min in the array\n5.Inverted Right Triangle Pattern");
+                "\n4.Find Max and min in the array\n5.Inverted right triangle pattern" +
+                "\n6.Rectangular boundary pattern ");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -28,6 +29,9 @@
                     break;
                 case 5:
                     PrintingPatterns.InvertedRightTriagle();
+                    break;
+                case 6:
+                    PrintingPatterns.RectangularBoundary();
                     break;
                 default:
                     Console.WriteLine("Invalid Input");
