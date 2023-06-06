@@ -9,7 +9,7 @@
                 + "\n2.Print all unique elements of array\n3.Frequency of each element" +
                 "\n4.Find Max and min in the array\n5.Inverted right triangle pattern" +
                 "\n6.Rectangular boundary pattern\n7.Revere each word of a string" +
-                "\n8.Sum of digits of a number");
+                "\n8.Sum of digits of a number\n9.Sum of each row of the matrix");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -45,6 +45,10 @@
                     int number = int.Parse(Console.ReadLine());
                     int sumOfDigits = NumberPrograms.SumOfDigits(number);
                     Console.WriteLine($"The sum of digits of {number} is {sumOfDigits}.");
+                    break;
+                case 9:
+                    Matrix matrix = new Matrix();
+                    matrix.Run();
                     break;
                 default:
                     Console.WriteLine("Invalid Input");
