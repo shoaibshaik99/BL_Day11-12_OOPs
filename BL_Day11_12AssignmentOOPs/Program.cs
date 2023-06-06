@@ -8,7 +8,7 @@
             Console.WriteLine("1.Count total number of duplicate elements in an array"
                 + "\n2.Print all unique elements of array\n3.Frequency of each element" +
                 "\n4.Find Max and min in the array\n5.Inverted right triangle pattern" +
-                "\n6.Rectangular boundary pattern ");
+                "\n6.Rectangular boundary pattern\n7.Revere each word of a string");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -32,6 +32,12 @@
                     break;
                 case 6:
                     PrintingPatterns.RectangularBoundary();
+                    break;
+                case 7:
+                    Console.Write("Enter a string: ");
+                    string input = Console.ReadLine();
+                    string result = StringPrograms.ReverseEachWordAtItsPosition(input);
+                    Console.WriteLine(result);
                     break;
                 default:
                     Console.WriteLine("Invalid Input");
