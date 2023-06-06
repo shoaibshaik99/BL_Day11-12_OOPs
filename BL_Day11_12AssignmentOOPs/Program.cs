@@ -8,8 +8,7 @@
             Console.WriteLine("1.Count total number of duplicate elements in an array"
                 + "\n2.Print all unique elements of array\n3.Frequency of each element" +
                 "\n4.Find Max and min in the array\n5.Inverted right triangle pattern" +
-                "\n6.Rectangular boundary pattern\n7.Revere each word of a string" +
-                "\n8.Sum of digits of a number");
+                "\n6.Rectangular boundary pattern\n7.Revere each word of a string");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -39,12 +38,6 @@
                     string input = Console.ReadLine();
                     string result = StringPrograms.ReverseEachWordAtItsPosition(input);
                     Console.WriteLine(result);
-                    break;
-                case 8:
-                    Console.Write("Enter a number: ");
-                    int number = int.Parse(Console.ReadLine());
-                    int sumOfDigits = NumberPrograms.SumOfDigits(number);
-                    Console.WriteLine($"The sum of digits of {number} is {sumOfDigits}.");
                     break;
                 default:
                     Console.WriteLine("Invalid Input");
